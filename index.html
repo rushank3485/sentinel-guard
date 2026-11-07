@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SentinelGuard · AI Threat & Scam Radar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+  
+  <header class="header">
+    <div class="logo">
+      <div class="shield-icon">🛡️</div>
+      <div>
+        <span class="brand-name">SentinelGuard</span>
+        <span class="badge">AI Radar v2.0</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="pulse-dot"></span>
+      <span class="status-text">Heuristic Engine Active</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="headline">Explainable Threat & Scam Detection</h1>
+      <p class="subhead">Instantly analyze suspicious SMS messages, phishing links, spoofed emails, and deceptive OTP requests with verifiable risk signals.</p>
+    </section>
+
+    <div class="card analyzer-card">
+      <div class="card-header">
+        <label for="input-target">Target Content or URL</label>
+        <div class="preset-pills">
+          <button class="pill" data-preset="bank">🚨 Bank OTP Fraud</button>
+          <button class="pill" data-preset="crypto">💰 Crypto Scam</button>
+          <button class="pill" data-preset="safe">✅ Verified GitHub</button>
+        </div>
+      </div>
+      
+      <div class="input-wrapper">
+        <textarea id="input-target" placeholder="Paste a suspicious SMS, email snippet, or URL here... (e.g. 'Dear customer, your SBI card blocked, update KYC at http://sbi-kyc-update.top')"></textarea>
+      </div>
+
+      <div class="action-bar">
+        <button id="scan-btn" class="primary-btn">
+          <span class="btn-text">Run Security Analysis</span>
+          <span class="btn-shortcut">⌘↵</span>
+        </button>
+        <button id="clear-btn" class="secondary-btn">Clear</button>
+      </div>
+    </div>
+
+    <div id="results" class="results-grid hidden">
+      <div class="card score-card">
+        <h3>Threat Score</h3>
+        <div class="gauge-container">
+          <svg class="gauge-svg" viewBox="0 0 160 160">
+            <circle class="gauge-bg" cx="80" cy="80" r="70"></circle>
+            <circle id="gauge-fill" class="gauge-fill" cx="80" cy="80" r="70"></circle>
+          </svg>
+          <div class="gauge-center">
+            <span id="score-number" class="score-number">0</span>
+            <span class="score-max">/100</span>
+          </div>
+        </div>
+        <div id="verdict-badge" class="verdict-badge safe">SAFE</div>
+        <p id="verdict-summary" class="verdict-summary">No prominent threat patterns detected.</p>
+      </div>
+
+      <div class="card breakdown-card">
+        <h3>Risk Breakdown</h3>
+        <div id="signals-list" class="signals-list"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>SentinelGuard Engine · Built by <a href="https://github.com/rushank3485" target="_blank">Rushank</a> · Open Source MIT License</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
