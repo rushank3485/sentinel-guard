@@ -22,7 +22,7 @@ Rather than acting as an opaque black box, SentinelGuard breaks down risks into 
 
 ## 🚀 Live Demo
 
-- **Live Web App:** [https://sentinel-guard-rushank.vercel.app](https://sentinel-guard-rushank.vercel.app)
+- **Live Web App:** [https://sentinel-guard-amber.vercel.app](https://sentinel-guard-amber.vercel.app)
 
 ---
 
